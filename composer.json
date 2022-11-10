@@ -1,0 +1,61 @@
+{
+    "name": "anticopyright-code/laravel-admin",
+    "description": "Laravel Admin Panel for laravel developers. You can create Quick Admin Panel with essential requirement.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adit Anticopyright",
+            "email": "adit@anticopyright.my.id"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shibaji\\Admin\\": "src/",
+            "Shibaji\\Admin\\Database\\Factories\\": "src/database/factories/",
+            "Shibaji\\Admin\\Database\\Seeders\\": "src/database/seeders/"
+        },
+        "files": [
+            "src/helpers/utilities.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shibaji\\Admin\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shibaji\\Admin\\AdminServiceProvider"
+            ],
+            "aliases": {
+                "Calculator": "Shibaji\\Admin\\Facades\\Calculator",
+                "Admin": "Shibaji\\Admin\\Facades\\Admin"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "doctrine/dbal": "latest",
+        "laravel/ui": "latest",
+        "livewire/livewire": "latest",
+        "nwidart/laravel-modules": "latest",
+        "spatie/laravel-permission": "latest",
+        "spatie/laravel-searchable": "latest",
+        "plank/laravel-metable": "latest",
+        "simshaun/recurr": "latest",
+        "nesbot/carbon": "latest",
+        "graham-campbell/markdown": "latest",
+        "barryvdh/laravel-dompdf": "latest",
+        "maatwebsite/excel": "latest",
+        "spatie/laravel-backup": "latest",
+        "spatie/laravel-medialibrary": "latest"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    }
+}
