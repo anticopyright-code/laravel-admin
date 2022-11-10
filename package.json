@@ -10,11 +10,11 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "cross-env": "^7.0",
-        "laravel-mix": "^5.0.1",
-        "laravel-mix-merge-manifest": "^0.1.2"
+        "cross-env": "latest",
+        "laravel-mix": "latest",
+        "laravel-mix-merge-manifest": "latest"
     },
     "dependencies": {
-        "datatables.net": "^1.10.22"
+        "datatables.net": "latest"
     }
 }
